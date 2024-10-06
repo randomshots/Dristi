@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero section background */
+.jumbotron {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+}
+
+.container {
+    font-weight: bold;
+    padding: 90px;
+    font-size: 20px;
+}
+
+.navbar {
+    background-color: whitesmoke;
+}
+
+/* Custom styles for the navbar */
+.navbar-custom {
+    background-color: lightgray;
+}
+
+.background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.9;
+    background-image: url("https://img.freepik.com/free-vector/white-background-gradient-modern-abstract-design-round-shape_343694-2340.jpg?t=st=1727181331~exp=1727184931~hmac=c914f78dd7f7d39a40ad98e1e9c95ee8ecdbe2b2ea4ad1ed4548b2efec4ce667&w=1060");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.welcome_heading {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Footer links */
+footer a:hover {
+    text-decoration: underline;
+}
+
+.left {
+    text-align: center;
+}
+
+.nav-link {
+    color: black;
+}
+
+.oreo {
+    color: black;
+    font-size: 25px;
+    font-family: Poppins;
+}
+
+.boru {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Poppins;
+}
+
+.eru {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Raleway;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* Custom carousel size */
+.custom-carousel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.custom-carousel .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.background-image {
+    animation: moveBg 10s linear infinite;
+}
+
+@keyframes moveBg {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+/* Hamburger Menu Styles */
+.off-screen-menu {
+    background-color: rgb(34, 37, 49);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.off-screen-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.off-screen-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* nav */
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: rgb(34, 37, 49);
+}
+
+/* Hamburger Icon */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+/* Navbar styles */
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; /* Or any color you prefer */
+    padding: 10px;
+}
+
+/* Body padding to prevent content from being hidden under the navbar */
+body {
+    padding-top: 20px; /* Adjust this value based on your navbar height */
+}
+
+/* Hamburger menu styles */
+.ham-menu {
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+/* used to increase the width of the ham burger menu */
+.ham-menu span {       
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.ham-menu.active span {
+    background-color: black; /* Change cross to black */
+}
+
+.ham-menu span:nth-child(1) {
+    top: 0px;
+}
+
+.ham-menu span:nth-child(2) {
+    top: 8px;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 16px;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+/* Off-screen menu styles */
+.off-screen-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide off-screen initially */
+    width: 250px;
+    height: 100%;
+    background-color: rgb(34, 37, 49);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+.off-screen-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.off-screen-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+/* Transform Section Styles */
+.transform-section {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.India{
+    font-weight: bold;
+    font-size: large;
+}
+.transform-content {
+    flex: 1;
+    padding: 0 50px;
+    font-family: Poppins;
+    font-size: 18px;
+}
+
+.transform-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.transform-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.transform-content .signature {
+    font-style: italic;
+    text-align: right;
+}
+
+.transform-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transform-image img {
+    max-width: 100%;
+    height: 50vh;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .transform-section {
+        flex-direction: column;
+    }
+
+    .transform-content, .transform-image {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+/* Global Academy Section Styles */
+.global-academy-section {
+    display: flex;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.global-academy-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-academy-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.global-academy-content {
+    flex: 1;
+    padding: 0 50px;
+    font-family: Poppins;
+    font-size: large;
+    font-weight: bold;
+}
+
+.global-academy-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.global-academy-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .global-academy-section {
+        flex-direction: column;
+    }
+
+    .global-academy-image, .global-academy-content {
+        padding: 20px;
+    }
+}
